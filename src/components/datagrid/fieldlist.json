@@ -1,0 +1,14 @@
+[
+  {"title":"序号","key":"id","dataIndex":"id","span":"2","required":true},
+  {"title":"名称","key":"name","dataIndex":"name","span":"2","required":true},
+  {"title":"名称","key":"name","dataIndex":"name","span":"2","required":true},
+  {"title":"名称","key":"name","dataIndex":"name","span":"2","required":true},
+  {"title":"名称","key":"name","dataIndex":"name","span":"2","required":true},
+  {"title":"名称","key":"name","dataIndex":"name","span":"2","required":true},
+
+  {"title":"名称","key":"name","dataIndex":"name","span":"2","required":true},
+  {"title":"名称","key":"name","dataIndex":"name","span":"2","required":true},
+  {"title":"名称","key":"name","dataIndex":"name","span":"2","required":true},
+
+  {"title":"操作","key":"name","dataIndex":"actions","render":"actionsrender"}
+]

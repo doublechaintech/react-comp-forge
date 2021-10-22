@@ -1,0 +1,312 @@
+{
+  "name": "功能导航",
+  "menuGoupList": [
+      {
+          "name": "1 - 系统管理",
+          "subMenuList": [
+              {
+                  "name": "组织机构",
+                  "linkto": "product"
+              },
+              {
+                  "name": "角色定义",
+                  "linkto": "job_type"
+              },
+              {
+                  "name": "用户管理",
+                  "linkto": "job"
+              },
+              {
+                  "name": "字典管理",
+                  "linkto": "dict"
+              },
+              {
+                  "name": "使用状态变更规则",
+                  "linkto": "product"
+              }
+          ]
+      },
+      {
+          "name": "2 - 基础信息管理",
+          "subMenuList": [
+              {
+                  "name": "工序管理",
+                  "linkto": "filling_flow"
+              },
+              {
+                  "name": "产品管理",
+                  "linkto": "product"
+              },
+              {
+                  "name": "产品组管理",
+                  "linkto": "product_group"
+              },
+              {
+                  "name": "工位管理",
+                  "linkto": "filling_station"
+              },
+              {
+                  "name": "批次管理",
+                  "linkto": "filling_batch"
+              },
+              {
+                  "name": "气瓶台账",
+                  "linkto": "cylinder"
+              },
+              {
+                  "name": "集装格台账",
+                  "linkto": "lattice"
+              },
+              {
+                  "name": "托盘台账",
+                  "linkto": "pallet"
+              },
+              {
+                  "name": "车辆台账",
+                  "linkto": "truck"
+              }
+          ]
+      },
+      {
+          "name": "3 - 客户管理",
+          "subMenuList": [
+              {
+                  "name": "客户台账",
+                  "linkto": "product"
+              },
+              {
+                  "name": "存瓶统计",
+                  "linkto": "product"
+              },
+              {
+                  "name": "资产流水",
+                  "linkto": "assert_action_log"
+              },
+              {
+                  "name": "客户盘点",
+                  "linkto": "product"
+              }
+          ]
+      },
+      {
+          "name": "4 - 生产管理",
+          "subMenuList": [
+              {
+                  "name": "高低储设置",
+                  "linkto": "product"
+              },
+              {
+                  "name": "生产计划",
+                  "linkto": "product"
+              },
+              {
+                  "name": "生产记录",
+                  "linkto": "product"
+              },
+              {
+                  "name": "批次管理",
+                  "linkto": "filling_batch"
+              },
+              {
+                  "name": "厂内盘点",
+                  "linkto": "product"
+              }
+          ]
+      },
+      {
+          "name": "5 - 质量管理",
+          "subMenuList": [
+              {
+                  "name": "产品分析记录",
+                  "linkto": "product"
+              }
+          ]
+      },
+      {
+          "name": "6 - 运输管理",
+          "subMenuList": [
+              {
+                  "name": "运单自动生成",
+                  "linkto": "product"
+              },
+              {
+                  "name": "运单手动生成",
+                  "linkto": "product"
+              },
+              {
+                  "name": "运单查询",
+                  "linkto": "product"
+              },
+              {
+                  "name": "车辆与司机关联",
+                  "linkto": "product"
+              }
+          ]
+      },
+      {
+          "name": "7 - 销售管理",
+          "subMenuList": [
+              {
+                  "name": "订单管理",
+                  "linkto": "product"
+              },
+              {
+                  "name": "用户反馈",
+                  "linkto": "product"
+              }
+          ]
+      },
+      {
+          "name": "8 - 安全管理",
+          "subMenuList": [
+              {
+                  "name": "预警设置",
+                  "linkto": "product"
+              },
+              {
+                  "name": "预警气瓶统计",
+                  "linkto": "product"
+              },
+              {
+                  "name": "预警集装格统计",
+                  "linkto": "product"
+              },
+              {
+                  "name": "预警杜瓦瓶统计",
+                  "linkto": "product"
+              },
+              {
+                  "name": "超期资产汇总",
+                  "linkto": "product"
+              },
+              {
+                  "name": "超期气瓶统计",
+                  "linkto": "product"
+              },
+              {
+                  "name": "超期集装格统计",
+                  "linkto": "product"
+              },
+              {
+                  "name": "超期杜瓦统计",
+                  "linkto": "product"
+              },
+              {
+                  "name": "生产检查记录",
+                  "linkto": "product"
+              }
+          ]
+      },
+      {
+          "name": "9 - 管理报表",
+          "subMenuList": [
+              {
+                  "name": "资产汇总表",
+                  "linkto": "product"
+              },
+              {
+                  "name": "产品变更记录",
+                  "linkto": "product"
+              },
+              {
+                  "name": "强制状态变更记录",
+                  "linkto": "product"
+              },
+              {
+                  "name": "资产调拨记录",
+                  "linkto": "product"
+              },
+              {
+                  "name": "黑洞瓶查找",
+                  "linkto": "product"
+              },
+              {
+                  "name": "滞留资产",
+                  "linkto": "product"
+              },
+              {
+                  "name": "资产流转率",
+                  "linkto": "product"
+              },
+              {
+                  "name": "客户占瓶统计",
+                  "linkto": "product"
+              },
+              {
+                  "name": "生产统计",
+                  "linkto": "product"
+              },
+              {
+                  "name": "异常配送记录",
+                  "linkto": "product"
+              },
+              {
+                  "name": "冻结记录",
+                  "linkto": "product"
+              },
+              {
+                  "name": "维修记录",
+                  "linkto": "product"
+              },
+              {
+                  "name": "报废记录",
+                  "linkto": "product"
+              },
+              {
+                  "name": "缺瓶分析",
+                  "linkto": "product"
+              }
+          ]
+      },
+      {
+          "name": "10 - 查询",
+          "subMenuList": [
+              {
+                  "name": "资产查询",
+                  "linkto": "product"
+              },
+              {
+                  "name": "客户查询",
+                  "linkto": "product"
+              },
+              {
+                  "name": "批次查询",
+                  "linkto": "product"
+              }
+          ]
+      },
+      {
+          "name": "11 - 运营大数据",
+          "subMenuList": [
+              {
+                  "name": "资产状态",
+                  "linkto": "product"
+              },
+              {
+                  "name": "流转状态",
+                  "linkto": "product"
+              },
+              {
+                  "name": "安全状态",
+                  "linkto": "product"
+              },
+              {
+                  "name": "生产状态",
+                  "linkto": "product"
+              },
+              {
+                  "name": "库存状态",
+                  "linkto": "product"
+              },
+              {
+                  "name": "滞留状态",
+                  "linkto": "product"
+              },
+              {
+                  "name": "运输状态",
+                  "linkto": "product"
+              }
+          ]
+      }
+  ]
+}

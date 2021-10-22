@@ -1,13 +1,20 @@
-import { useState } from 'react';
-import styles from './index.css';
 
+import 'antd/dist/antd.less'
+import  './index.less';
 import Access from '../components/access';
-import 'antd/dist/antd.css';
+
+
+
+
+
+
 
 export default function() {
   return (
-    <div className={styles.normal}>
+    <div >
       <Access />
     </div>
   );
 }
+
+

@@ -5,3 +5,21 @@ html, body, #root {
 body {
   margin: 0;
 }
+
+.ant-checkbox-wrapper {
+
+  font-size: 10px;
+
+}
+
+.ant-checkbox-inner {
+  width: 10px;
+  height: 10px;
+}
+
+
+.ant-checkbox-inner::after {
+  width: 5px;
+  height: 8px;
+}
+

@@ -15,10 +15,11 @@ const getLine=({lines,index})=>{
   const lineNumber=Math.floor(index/6);
 
   if(!lines[lineNumber]){
-    console.log("lines[lineNumber]",lines[lineNumber],lineNumber)
+    //console.log("lines[lineNumber]",lines[lineNumber],lineNumber)
     lines[lineNumber]=[]
     return lines[lineNumber]
   }
+
 
 
   return lines[lineNumber];
@@ -50,7 +51,7 @@ export default function Access (props)  {
   const [checked,setChecked]=useState(false)
 
   const onChange = e => {
-    setChecked(!e.target.value)
+    setChecked(e.target.checked)
   };
 
 
@@ -82,7 +83,18 @@ export default function Access (props)  {
 
   </TabPane>
   <TabPane tab="App端权限" key="2">
-    Content of Tab Pane 2
+
+  {splitIntoLines().map(line=>(
+        <Row style={{borderBottom:"solid darkblue", padding:"10px"}}>
+          {line.map(group=>(<Col span={4} style={{padding:"10px",display: "flex-start", alignItems:"start"}}>
+             <div style={{padding:"10px",textAlign:"left"}}>{group.name}</div>
+          {group.subMenuList.map(item=>(
+          <div style={{fontSize:"10px",textAlign:"left"}}><Checkbox checked={checked} onChange={onChange}>{item.name}</Checkbox>
+          </div>))}
+          </Col>))}
+
+           </Row>
+      ))}
   </TabPane>
 
 </Tabs>

@@ -1,0 +1,26 @@
+{
+
+  "name":"dict",
+
+  "localName":"系统管理->表单测试",
+  "viewList":[
+    {"viewkey":"entry","component":"tinyform","data":{
+
+      "fieldList":[
+        {"title":"序号","key":"id","dataIndex":"id","span":"2"},
+        {"title":"名称","key":"name","dataIndex":"name","span":"2","required":true},
+        {"title":"日期","key":"date","dataIndex":"date","span":"2","required":true,"editor":"datepicker"},
+        {"title":"颜色","key":"color","dataIndex":"color","span":"2","required":true,"editor":"colorpicker"},
+        {"title":"对象","key":"order","dataIndex":"order","span":"2","required":true,"editor":"objectpicker"},
+
+        {"title":"操作","key":"name","dataIndex":"actions","render":"actionsrender"}],
+      "datarow":{"id":"1","name":"钢瓶1",
+        "actions":[{"name":"查看", "execute":"view","target":"detail"},{"name":"修改", "execute":"modify","target":"modify"}]
+      }
+
+
+    }},
+    {"viewkey":"second","component":"simpletable","data":{}}
+  ]
+
+}

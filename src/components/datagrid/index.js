@@ -8,7 +8,7 @@ const formatValue=(props)=>{
   //console.log("cell props", props);
   const key=props.column.key
   const value=props.row[key]
-  return <a href="#" title={JSON.stringify(props)}>{value}</a>;
+  return <span title={JSON.stringify(props)}>{value}</span>;
 }
 
 

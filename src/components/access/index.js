@@ -1,8 +1,16 @@
 import { Tabs } from 'antd';
-import { Checkbox, Button } from 'antd';
+import { Checkbox } from 'antd';
 import { Row, Col } from 'antd';
 import { useState } from 'react';
-import menuData from './menu.json'
+import pcMenuData from './pcmenu.json'
+import appMenuData from  './appmenu.json'
+
+
+import 'antd/dist/antd.less'
+
+import  './index.less';
+
+
 const { TabPane } = Tabs;
 
 function callback(key) {
@@ -26,15 +34,14 @@ const getLine=({lines,index})=>{
 
 
 }
-const splitIntoLines=()=>{
+const splitIntoLines=({menuData})=>{
 
   const lines=[]
 
-  menuData.menuGoupList.forEach((group,index)=>{
+  menuData.menuGroupList.forEach((group,index)=>{
 
     const line=getLine({lines,index});
     line.push(group);
-
 
 
   })
@@ -48,53 +55,56 @@ const splitIntoLines=()=>{
 
 export default function Access (props)  {
 
-  const [checked,setChecked]=useState(false)
+  const [checkStatus,setCheckStatus]=useState([])
 
-  const onChange = e => {
-    setChecked(e.target.checked)
+  const onChange = ({event,itemName}) => {
+
+    const value=[];
+    value[itemName]=event.target.checked
+    setCheckStatus({...checkStatus,...value})
+
+    //setChecked(event.target.checked)
   };
 
 
-
-
-
   return   (
-    <Tabs defaultActiveKey="1" onChange={callback}>
+    <Tabs defaultActiveKey="1" onChange={callback} style={{padding:"20px",backgroundColor:"rgba(242, 242, 242, 1)"}}>
       <TabPane tab="Web端权限" key="1">
 
 
-      {splitIntoLines().map(line=>(
+      {splitIntoLines({menuData:pcMenuData}).map(line=>(
         <Row style={{borderBottom:"solid darkblue", padding:"10px"}}>
           {line.map(group=>(<Col span={4} style={{padding:"10px",display: "flex-start", alignItems:"start"}}>
-             <div style={{padding:"10px",textAlign:"left"}}>{group.name}</div>
+             <div style={{textAlign:"left"}}>{group.name}</div>
           {group.subMenuList.map(item=>(
-          <div style={{fontSize:"10px",textAlign:"left"}}><Checkbox checked={checked} onChange={onChange}>{item.name}</Checkbox>
+          <div style={{fontSize:"10px",textAlign:"left"}}>
+            <Checkbox checked={checkStatus[item.name]} onChange={(event)=>onChange({event,itemName:item.name})}>{item.name}</Checkbox>
           </div>))}
           </Col>))}
 
            </Row>
       ))}
-
-
-
-
 
 
 
   </TabPane>
   <TabPane tab="App端权限" key="2">
 
-  {splitIntoLines().map(line=>(
+
+  {splitIntoLines({menuData:appMenuData}).map(line=>(
         <Row style={{borderBottom:"solid darkblue", padding:"10px"}}>
           {line.map(group=>(<Col span={4} style={{padding:"10px",display: "flex-start", alignItems:"start"}}>
-             <div style={{padding:"10px",textAlign:"left"}}>{group.name}</div>
+             <div style={{textAlign:"left"}}>{group.name}</div>
           {group.subMenuList.map(item=>(
-          <div style={{fontSize:"10px",textAlign:"left"}}><Checkbox checked={checked} onChange={onChange}>{item.name}</Checkbox>
+          <div style={{fontSize:"10px",textAlign:"left"}}>
+            <Checkbox checked={checkStatus[item.name]} onChange={(event)=>onChange({event,itemName:item.name})}>{item.name}</Checkbox>
           </div>))}
           </Col>))}
 
            </Row>
       ))}
+
+
   </TabPane>
 
 </Tabs>
@@ -102,5 +112,16 @@ export default function Access (props)  {
 
 }
 
+
+/*
+
+强制状态转换
+资产信息查询
+资产冻结
+资产调拨
+资产挂失
+
+
+*/
 
 

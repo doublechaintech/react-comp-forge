@@ -1,0 +1,246 @@
+{
+  "name": "功能导航",
+  "menuGroupList": [
+      {
+          "name": "1-管理",
+          "subMenuList": [
+              {
+                  "name": "强制状态转换",
+                  "linkto": "F0001"
+              },
+              {
+                  "name": "资产信息查询",
+                  "linkto": "F0002"
+              },
+              {
+                  "name": "资产冻结",
+                  "linkto": "F0003"
+              },
+              {
+                  "name": "资产调拨",
+                  "linkto": "F0004"
+              },
+              {
+                  "name": "资产挂失",
+                  "linkto": "F0005"
+              }
+          ]
+      },
+      {
+          "name": "2-注册",
+          "subMenuList": [
+              {
+                  "name": "气瓶注册",
+                  "linkto": "F0006"
+              },
+              {
+                  "name": "杜瓦注册",
+                  "linkto": "F0007"
+              },
+              {
+                  "name": "托盘注册",
+                  "linkto": "F0008"
+              },
+              {
+                  "name": "集装格注册",
+                  "linkto": "F0009"
+              },
+              {
+                  "name": "集装格组装",
+                  "linkto": "F0010"
+              },
+              {
+                  "name": "条码替换",
+                  "linkto": "F0011"
+              },
+              {
+                  "name": "乙炔瓶注册",
+                  "linkto": "F0012"
+              },
+              {
+                  "name": "车用瓶注册",
+                  "linkto": "F0013"
+              }
+          ]
+      },
+      {
+          "name": "3-预检",
+          "subMenuList": [
+              {
+                  "name": "预检",
+                  "linkto": "F0014"
+              },
+              {
+                  "name": "托盘绑定气瓶",
+                  "linkto": "F0015"
+              },
+              {
+                  "name": "托盘清空",
+                  "linkto": "F0016"
+              }
+          ]
+      },
+      {
+          "name": "4-充装",
+          "subMenuList": [
+              {
+                  "name": "充装前检查",
+                  "linkto": "F0017"
+              },
+              {
+                  "name": "充装",
+                  "linkto": "F0018"
+              },
+              {
+                  "name": "充装后检查",
+                  "linkto": "F0019"
+              },
+              {
+                  "name": "外购收货",
+                  "linkto": "F0020"
+              },
+              {
+                  "name": "放空",
+                  "linkto": "F0021"
+              },
+              {
+                  "name": "退满入库",
+                  "linkto": "F0022"
+              },
+              {
+                  "name": "生产计划查询",
+                  "linkto": "F0023"
+              }
+          ]
+      },
+      {
+          "name": "5-分析",
+          "subMenuList": [
+              {
+                  "name": "充装-充装员列表",
+                  "linkto": "F0024"
+              },
+              {
+                  "name": "充装-检查员列表",
+                  "linkto": "F0025"
+              },
+              {
+                  "name": "分析",
+                  "linkto": "F0026"
+              },
+              {
+                  "name": "放空",
+                  "linkto": "F0027"
+              },
+              {
+                  "name": "产品更改",
+                  "linkto": "F0028"
+              },
+              {
+                  "name": "分析结果查询",
+                  "linkto": "F0029"
+              }
+          ]
+      },
+      {
+          "name": "6-拣配",
+          "subMenuList": [
+              {
+                  "name": "行程单拣配",
+                  "linkto": "F0030"
+              },
+              {
+                  "name": "托盘绑定气瓶",
+                  "linkto": "F0031"
+              },
+              {
+                  "name": "托盘清空",
+                  "linkto": "F0032"
+              },
+              {
+                  "name": "出厂装车",
+                  "linkto": "F0033"
+              },
+              {
+                  "name": "回厂卸车",
+                  "linkto": "F0034"
+              },
+              {
+                  "name": "放空",
+                  "linkto": "F0035"
+              }
+          ]
+      },
+      {
+          "name": "7-配送",
+          "subMenuList": [
+              {
+                  "name": "路线导航",
+                  "linkto": "F0036"
+              },
+              {
+                  "name": "货车配送",
+                  "linkto": "F0037"
+              },
+              {
+                  "name": "上门自提",
+                  "linkto": "F0038"
+              },
+              {
+                  "name": "工厂间转移交付",
+                  "linkto": "F0039"
+              },
+              {
+                  "name": "工厂间转移接收",
+                  "linkto": "F0040"
+              },
+              {
+                  "name": "内部领用",
+                  "linkto": "F0041"
+              },
+              {
+                  "name": "资产冻结",
+                  "linkto": "F0042"
+              }
+          ]
+      },
+      {
+          "name": "8-维护",
+          "subMenuList": [
+              {
+                  "name": "报修",
+                  "linkto": "F0043"
+              },
+              {
+                  "name": "维修",
+                  "linkto": "F0044"
+              },
+              {
+                  "name": "检定",
+                  "linkto": "F0045"
+              },
+              {
+                  "name": "资产报废",
+                  "linkto": "F0046"
+              },
+              {
+                  "name": "资产出售",
+                  "linkto": "F0047"
+              }
+          ]
+      },
+      {
+          "name": "9-盘点",
+          "subMenuList": [
+              {
+                  "name": "内部盘点",
+                  "linkto": "F0048"
+              },
+              {
+                  "name": "客户盘点",
+                  "linkto": "F0049"
+              }
+          ]
+      }
+  ]
+}

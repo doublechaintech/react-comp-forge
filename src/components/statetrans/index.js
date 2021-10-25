@@ -2,9 +2,9 @@ import { Tabs } from 'antd';
 import { Checkbox } from 'antd';
 import { Row, Col } from 'antd';
 import { useState } from 'react';
-
+import styles from './index.less'
 import status from './status.json'
-
+import locations from './locations.json'
 const range = (start, end, length = end - start + 1) =>
   Array.from({ length }, (_, i) => start + i)
 
@@ -33,13 +33,13 @@ export default function StateTrans (props)  {
 {range(0,15).map(indexCase=>(
   <Row>
     <Col span={8}>
-     <input type="checkbox" />情形{indexCase}
+     <input type="checkbox" />情形{indexCase+1}
     </Col>
     <Col span={8}>
-     <select>{status.map((item,index)=>(<option value={item.code}>S-{index+1} {item.name}</option>))}</select>
+     <select className={styles.select}>{status.map((item,index)=>(<option value={item.code}>S-{index+1} {item.name}</option>))}</select>
     </Col>
     <Col span={8}>
-     <select>{status.map((item,index)=>(<option value={item.code}>S-{index+1} {item.name}</option>))}</select>
+     <select className={styles.select}>{status.map((item,index)=>(<option value={item.code}>S-{index+1} {item.name}</option>))}</select>
     </Col>
   </Row>
 ))}
@@ -63,18 +63,18 @@ export default function StateTrans (props)  {
 
 
 
-      {range(0,2).map(index=>(
+      {range(0,2).map(indexCase=>(
   <Row>
     <Col span={8}>
-     <input type="checkbox" />情形{index}
+     <input type="checkbox" />情形{indexCase}
     </Col>
     <Col span={8}>
-     <select><option value="12">hello</option></select>
+     <select className={styles.select}>{locations.map((item,index)=>(<option value={item.code}>H-{index+1} {item.name}</option>))}</select>
     </Col>
     <Col span={8}>
-     <select><option value="12">hello</option></select>
+     <select className={styles.select}>{locations.map((item,index)=>(<option value={item.code}>H-{index+1} {item.name}</option>))}</select>
     </Col>
-</Row>
+  </Row>
 ))}
 
 

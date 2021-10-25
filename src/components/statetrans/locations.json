@@ -1,0 +1,5 @@
+[
+  {"code":"IN_FACTORY","name":"厂内"},
+  {"code":"ON_DELIVERY","name":"车上"},
+  {"code":"AT_CUSTOMER","name":"客户处"}
+]

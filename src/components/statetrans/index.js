@@ -64,18 +64,18 @@ export default function StateTrans (props)  {
 
 
       {range(0,2).map(indexCase=>(
-  <Row>
-    <Col span={8}>
-     <input type="checkbox" />情形{indexCase}
-    </Col>
-    <Col span={8}>
-     <select className={styles.select}>{locations.map((item,index)=>(<option value={item.code}>H-{index+1} {item.name}</option>))}</select>
-    </Col>
-    <Col span={8}>
-     <select className={styles.select}>{locations.map((item,index)=>(<option value={item.code}>H-{index+1} {item.name}</option>))}</select>
-    </Col>
-  </Row>
-))}
+        <Row>
+          <Col span={8}>
+          <input type="checkbox" />情形{indexCase}
+          </Col>
+          <Col span={8}>
+          <select className={styles.select}>{locations.map((item,index)=>(<option value={item.code}>H-{index+1} {item.name}</option>))}</select>
+          </Col>
+          <Col span={8}>
+          <select className={styles.select}>{locations.map((item,index)=>(<option value={item.code}>H-{index+1} {item.name}</option>))}</select>
+          </Col>
+        </Row>
+      ))}
 
 
 

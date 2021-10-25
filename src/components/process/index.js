@@ -18,6 +18,9 @@ export default function Process(props){
     const newValue=[]
     newValue[index]=event.target.checked
     console.log("event.target.checked->"+index,event.target.checked)
+    console.log("values",values)
+
+
     setValues({...values,...newValue})
   }
 

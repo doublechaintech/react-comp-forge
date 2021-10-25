@@ -1,0 +1,20 @@
+
+
+[
+{"code":"CHECKED_AFTER_FILL","name":"待分析"},
+{"code":"CHECKED_BEFORE_FILL","name":"充装前检查完毕 "},
+{"code":"CUSTOMER","name":"已配送"},
+{"code":"DELIVERY","name":"配送在途"},
+{"code":"DISABLED","name":"冻结"},
+{"code":"DISCARDED","name":"报废 "},
+{"code":"EMPTY","name":"空 "},
+{"code":"EMPTY_CHECKED","name":"空，已预检 "},
+{"code":"EMPTY_PICKED","name":"空，已拣配"},
+{"code":"FILLED","name":"充装中检查完毕"},
+{"code":"FULL","name":"满瓶"},
+{"code":"FULL_PICKED","name":"满瓶，已拣配 "},
+{"code":"INTERNAL_USE","name":"内部领用"},
+{"code":"LOST","name":"丢失"},
+{"code":"MAINTAIN","name":"维修"},
+{"code":"SELLED","name":"出售"}
+]

@@ -1,0 +1,3 @@
+select concat('{"code":',id,'","name":"',name,'"},') from asset_status_data;
+
+

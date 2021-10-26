@@ -21,10 +21,10 @@ export default function StateTrans (props)  {
 
           </Col>
           <Col span={8}>
-          操作前状态
+          <span className={styles.label}>操作前状态</span>
           </Col>
           <Col span={8}>
-          操作后状态
+          <span className={styles.label}>操作后状态</span>
           </Col>
       </Row>
 
@@ -32,7 +32,7 @@ export default function StateTrans (props)  {
 
 {range(0,15).map(indexCase=>(
   <Row>
-    <Col span={8}>
+    <Col span={8} >
      <input type="checkbox" />情形{indexCase+1}
     </Col>
     <Col span={8}>
@@ -46,18 +46,18 @@ export default function StateTrans (props)  {
 
 
       </Col>
-      <Col span={12}>
+      <Col span={12} >
 
 
       <Row>
           <Col span={8}>
 
           </Col>
-          <Col span={8}>
-          操作前库位
+          <Col  span={8}>
+          <span className={styles.label}>操作前库位</span>
           </Col>
-          <Col span={8}>
-          操作后库位
+          <Col  span={8}>
+          <span className={styles.label}>操作后库位</span>
           </Col>
       </Row>
 
@@ -76,10 +76,6 @@ export default function StateTrans (props)  {
           </Col>
         </Row>
       ))}
-
-
-
-
 
       </Col>
     </Row>

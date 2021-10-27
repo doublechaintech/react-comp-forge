@@ -5,10 +5,34 @@ import { useState } from 'react';
 import styles from './index.less'
 import status from './status.json'
 import locations from './locations.json'
+import selectors from './selector.json'
 const range = (start, end, length = end - start + 1) =>
   Array.from({ length }, (_, i) => start + i)
 
+
+
 export default function StateTrans (props)  {
+
+
+  return <><Row><Col span={24}><ItemSelector/></Col></Row><Row><Col span={24}><StateEditor/></Col></Row></>
+}
+
+
+
+function ItemSelector(props){
+
+
+
+
+
+
+  return <div className={styles.itemSelector}><select >{selectors.map(selector=>(<option value={selector.code}>{selector.name}</option>))}</select></div>
+
+
+}
+
+
+function StateEditor (props)  {
 
 
   return (<div>
@@ -17,32 +41,32 @@ export default function StateTrans (props)  {
       <Col span={12}>
 
       <Row>
-          <Col span={8}>
+          <Col span={4}>
 
           </Col>
-          <Col span={8}>
+          <Col span={10}>
           <span className={styles.label}>操作前状态</span>
           </Col>
-          <Col span={8}>
+          <Col span={10}>
           <span className={styles.label}>操作后状态</span>
           </Col>
       </Row>
 
 
 
-{range(0,15).map(indexCase=>(
-  <Row>
-    <Col span={8} >
-     <input type="checkbox" />情形{indexCase+1}
-    </Col>
-    <Col span={8}>
-     <select className={styles.select}>{status.map((item,index)=>(<option value={item.code}>S-{index+1} {item.name}</option>))}</select>
-    </Col>
-    <Col span={8}>
-     <select className={styles.select}>{status.map((item,index)=>(<option value={item.code}>S-{index+1} {item.name}</option>))}</select>
-    </Col>
-  </Row>
-))}
+          {range(0,15).map(indexCase=>(
+            <Row>
+              <Col span={4} >
+              <input type="checkbox" />情形{indexCase+1}
+              </Col>
+              <Col span={10}>
+              <select className={styles.select}>{status.map((item,index)=>(<option value={item.code}>S-{index+1} {item.name}</option>))}</select>
+              </Col>
+              <Col span={10}>
+              <select className={styles.select}>{status.map((item,index)=>(<option value={item.code}>S-{index+1} {item.name}</option>))}</select>
+              </Col>
+            </Row>
+          ))}
 
 
       </Col>
@@ -50,13 +74,13 @@ export default function StateTrans (props)  {
 
 
       <Row>
-          <Col span={8}>
+          <Col span={4}>
 
           </Col>
-          <Col  span={8}>
+          <Col  span={10}>
           <span className={styles.label}>操作前库位</span>
           </Col>
-          <Col  span={8}>
+          <Col  span={10}>
           <span className={styles.label}>操作后库位</span>
           </Col>
       </Row>
@@ -65,13 +89,13 @@ export default function StateTrans (props)  {
 
       {range(0,2).map(indexCase=>(
         <Row>
-          <Col span={8}>
+          <Col span={4}>
           <input type="checkbox" />情形{indexCase}
           </Col>
-          <Col span={8}>
+          <Col span={10}>
           <select className={styles.select}>{locations.map((item,index)=>(<option value={item.code}>H-{index+1} {item.name}</option>))}</select>
           </Col>
-          <Col span={8}>
+          <Col span={10}>
           <select className={styles.select}>{locations.map((item,index)=>(<option value={item.code}>H-{index+1} {item.name}</option>))}</select>
           </Col>
         </Row>
@@ -86,6 +110,8 @@ export default function StateTrans (props)  {
 
 
 }
+
+
 
 
 /*

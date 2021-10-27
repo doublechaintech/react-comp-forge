@@ -24,7 +24,8 @@ export default function Process(props){
     setValues({...values,...newValue})
   }
 
-  return <div className={styles.container}><img src={processImage} width={800} alt={`process`}/>
+  return <div><div className={styles.container}>
+    <img src={processImage} width={800} alt={`process`}/>
 
 {
 
@@ -34,6 +35,11 @@ export default function Process(props){
 }
 
 
+
+  </div>
+  <div className={styles.actionArea}>
+    <button >保存</button>
+  </div>
 
   </div>
 

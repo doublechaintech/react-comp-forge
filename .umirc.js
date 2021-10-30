@@ -7,6 +7,10 @@ export default {
       component: '../layouts/index',
       routes: [
         {
+          path: '/test',
+          component: '../pages/test/test-page',
+        },
+        {
           path: '/datagrid',
           component: './datagrid',
         },
@@ -26,7 +30,7 @@ export default {
     [
       'umi-plugin-react',
       {
-        antd: false,
+        antd: true,
         dva: false,
         dynamicImport: false,
         title: 'react-comp-forge',

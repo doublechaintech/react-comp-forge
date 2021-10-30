@@ -1,0 +1,62 @@
+@import '~antd/es/style/themes/default.less';
+
+.container {
+  display: block;
+  width: 248px;
+  height: 240px;
+  border: 1px solid #f4f4f4;
+}
+
+.name {
+  background-color: #f2f2f2;
+}
+
+.cardTitle {
+  padding: 10px 20px;
+  color: rgb(255, 106, 0);
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.lineItem {
+  font-size: 13px;
+  padding: 8px 20px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: #444;
+
+  :global(.anticon) {
+    padding-right: 4px;
+  }
+
+  &:hover {
+    color: rgb(255, 106, 0);
+
+    .lineItemBrief {
+      color: rgb(255, 106, 0);
+    }
+  }
+}
+
+.line {
+  height: 1px;
+  background-color: #f4f4f4;
+  margin: 10px 0;
+}
+
+.lineItemTitle {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.lineItemBrief {
+  color: #aaa
+}

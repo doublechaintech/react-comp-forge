@@ -1,5 +1,6 @@
 import styles from './styles.less';
-import UserInfoDropdown from './user-info-dropdown/user-info-dropdown';
+import UserInfoDropdown from '@/components/user-info-dropdown/user-info-dropdown';
+
 
 export default function TestPage() {
 

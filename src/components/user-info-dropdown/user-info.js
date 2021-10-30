@@ -1,4 +1,4 @@
-import { ApartmentOutlined, IdcardOutlined, ProfileOutlined, StarFilled } from '@ant-design/icons';
+import { ApartmentOutlined, CheckOutlined, IdcardOutlined, StarFilled, UserOutlined } from '@ant-design/icons';
 import classNames from 'classnames';
 import styles from './styles.less';
 
@@ -29,7 +29,15 @@ export default function UserInfo(props) {
       <div className={styles.line} />
 
       <LineItem title='登录组织' icon={<ApartmentOutlined />} brief={currentFactory} />
-      <LineItem title='角色信息' icon={<ProfileOutlined />} brief={roleList.join(',')} />
+      {
+        roleList.map((it, idx) => (
+          <LineItem key={idx}
+                    title={it}
+                    icon={<UserOutlined />}
+                    brief={<CheckOutlined />}
+          />))
+      }
+
     </div>
   );
 };

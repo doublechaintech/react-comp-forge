@@ -1,6 +1,6 @@
 import { Col, Row } from 'antd';
 import { AlertOutlined, DeploymentUnitOutlined, LineChartOutlined, TransactionOutlined } from '@ant-design/icons';
-import styles from './styles.less';
+import styles from './home-ad-list.less';
 
 const AdItem = ({ title, brief, icon }) => (
   <Col className={styles.item}>

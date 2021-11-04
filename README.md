@@ -1,2 +1,15 @@
-# react-comp-forge
-A Component Forge Project for testing components
+# umi project
+
+## Getting Started
+
+Install dependencies,
+
+```bash
+$ yarn
+```
+
+Start the dev server,
+
+```bash
+$ yarn start
+```

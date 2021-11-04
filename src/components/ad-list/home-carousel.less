@@ -1,0 +1,27 @@
+.container {
+  background-color: #ccc;
+  height: 350px;
+  width: 100%;
+
+  :global(.slick-dots-bottom) {
+    bottom: 40px;
+    left: -85%;
+  }
+
+  :global(.slick-dots li button) {
+    background: #ccc;
+    width: 20px
+  }
+
+  :global(.slick-dots li.slick-active button) {
+    background: rgb(255, 106, 0);
+    width: 25px
+  }
+
+  .carouselItem {
+    img {
+      height: 100%;
+      object-fit: fill;
+    }
+  }
+}

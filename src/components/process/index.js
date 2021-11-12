@@ -1,48 +1,43 @@
-
-
-import processImage from './process.png'
-import styles from './index.less'
-import { useState } from 'react'
-
-
+import processImage from "./process.png";
+import styles from "./index.less";
+import { useState } from "react";
 
 const range = (start, end, length = end - start + 1) =>
-  Array.from({ length }, (_, i) => start + i)
+  Array.from({ length }, (_, i) => start + i);
 
-export default function Process(props){
+export default function Process(props) {
+  const [values, setValues] = useState([]);
 
+  const handleChange = ({ event, index }) => {
+    const newValue = [];
+    newValue[index] = event.target.checked;
+    console.log("event.target.checked->" + index, event.target.checked);
+    console.log("values", values);
 
-  const [values,setValues]=useState([])
+    setValues({ ...values, ...newValue });
+  };
 
-  const handleChange=({event,index})=>{
-    const newValue=[]
-    newValue[index]=event.target.checked
-    console.log("event.target.checked->"+index,event.target.checked)
-    console.log("values",values)
+  return (
+    <div className={styles.process}>
+      <div className={styles.container}>
+        <img src={processImage} width={800} alt={`process`} />
 
-
-    setValues({...values,...newValue})
-  }
-
-  return <div><div className={styles.container}>
-    <img src={processImage} width={800} alt={`process`}/>
-
-{
-
-  range(0,26).map(index=><div key={`checkbox-${index}`} className={styles[`cell${index}`]}>
-  <input  checked={values[index]||false} className={styles.checkbox} title={index} type="checkbox" id={index} onChange={(event)=>handleChange({event,index})}/>
-  </div>)
+        {range(0, 26).map((index) => (
+          <div key={`checkbox-${index}`} className={styles[`cell${index}`]}>
+            <input
+              checked={values[index] || false}
+              className={styles.checkbox}
+              title={index}
+              type="checkbox"
+              id={index}
+              onChange={(event) => handleChange({ event, index })}
+            />
+          </div>
+        ))}
+      </div>
+      <div className={styles.actionArea}>
+        <button>保存</button>
+      </div>
+    </div>
+  );
 }
-
-
-
-  </div>
-  <div className={styles.actionArea}>
-    <button >保存</button>
-  </div>
-
-  </div>
-
-
-}
-

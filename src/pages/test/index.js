@@ -4,7 +4,7 @@ import GraphObject from '@/pages/test/graph-object';
 import mockData from './mock-data';
 import _ from 'lodash';
 
-export default function TestPage() {
+export default function Index() {
 
   const handleClick = () => {
     const resp = _.cloneDeep(mockData);

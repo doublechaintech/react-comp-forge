@@ -1,30 +1,39 @@
 import styles from './styles.less';
-import UserInfoDropdown from '@/components/user-info-dropdown/user-info-dropdown';
-import HomeAdList from '@/components/ad-list/home-ad-list';
-import HomeCarousel from '@/components/ad-list/home-carousel';
-
+import { Button } from 'antd';
+import GraphObject from '@/pages/test/graph-object';
+import mockData from './mock-data';
+import _ from 'lodash';
 
 export default function TestPage() {
 
+  const handleClick = () => {
+    const resp = _.cloneDeep(mockData);
+    console.log('before 1', resp.data[0].merchant.parentMerchantList[1].name);
+    console.log('before 2', resp.data[1].name);
+
+    const obj = GraphObject.parse(resp);
+    obj.data[0].merchant.parentMerchantList[1].name = '四川航空';
+
+    console.log('after 1', obj.data[0].merchant.parentMerchantList[1].name);
+    console.log('after 2', obj.data[1].name);
+
+
+    const resp2 = JSON.parse(GraphObject.stringify(obj));
+    console.log('resp2', resp2);
+
+
+    const obj2 = GraphObject.parse(resp2);
+    obj2.data[0].merchant.parentMerchantList[1].name = '四川航空222';
+
+    console.log('after 1', obj2.data[0].merchant.parentMerchantList[1].name);
+    console.log('after 2', obj2.data[1].name);
+
+
+  };
+
   return (
     <div className={styles.container}>
-      <UserInfoDropdown
-        name={'周廷志'}
-        employeeNo={'11308'}
-        mobile={'13880964614'}
-        currentFactory={'珠江工厂'}
-        roleList={['司机', '车间主任']}
-      />
-
-      <HomeCarousel
-        items={[
-          { id: 1, imageUrl: require('./slide-1.png') },
-          { id: 2, imageUrl: require('./slide-2.png') },
-        ]} />
-      <div style={{ marignTop: 40 }}>
-        <HomeAdList />
-      </div>
-
+      <Button onClick={handleClick}>parse</Button>
     </div>
   );
 };

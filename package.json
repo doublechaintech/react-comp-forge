@@ -13,6 +13,8 @@
     "ag-grid-react": "^26.1.0",
     "antd": "^4.16.13",
     "classnames": "^2.3.1",
+    "deepdash": "^5.3.9",
+    "lodash": "^4.17.21",
     "react": "^16.8.6",
     "react-data-grid": "^7.0.0-beta.7",
     "react-dom": "^16.8.6"

@@ -69,7 +69,21 @@ export default function StateTrans(props) {
     }
   };
 
-  const handleRuleChange = ({ event, code, index, fromCode, toCode }) => {};
+  const handleRuleChange = ({ event, code, index, seq}) => {
+
+    console.log("event",event.target.value)
+    const rules = values[code];
+    const property=(seq===0?"fromStatus":"toStatus");
+    if (rules) {
+      const rule = rules[index];
+      rule.checked = true;
+      rule[property] = event.target.value;
+      const newValue = { ...values };
+      newValue[code] = rules;
+      setValues(newValue);
+      return;
+    }
+  };
 
   const selectorProps = {
     selectedCode,
@@ -198,7 +212,18 @@ function StateEditor(props) {
                   情形{indexCase + 1}
                 </Col>
                 <Col span={10}>
-                  <select className={styles.select}>
+                  <select className={styles.select}
+
+                    onChange={(event) =>
+                      handleRuleChange({
+                        event,
+                        code: selectedCode,
+                        index: indexCase,
+                        seq:0
+                      })
+                    }
+
+                  >
                     {status.map((item, index) => (
                       <option value={item.code}>
                         S-{index + 1} {item.name}
@@ -207,7 +232,20 @@ function StateEditor(props) {
                   </select>
                 </Col>
                 <Col span={10}>
-                  <select className={styles.select}>
+                  <select className={styles.select}
+
+                  onChange={(event) =>
+                    handleRuleChange({
+                      event,
+                      code: selectedCode,
+                      index: indexCase,
+                      seq:1
+                    })
+                  }
+
+
+
+                  >
                     {status.map((item, index) => (
                       <option value={item.code}>
                         S-{index + 1} {item.name}

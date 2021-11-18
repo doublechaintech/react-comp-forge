@@ -1,24 +1,53 @@
-.select{
-
-  font-size: 10px;
-
-
+.select {
+  font-size: 14px;
+}
+.container {
+  padding: 40px;
 }
 
-.label{
+.selectedItem {
+  background-color: rgb(43, 56, 144);
 
-  background-color: darkblue;
+  width: 100%;
+  font-size: 15px;
+  color: white;
+
+  :global(.ant-list-sm .ant-list-item) {
+    background-color: rgb(43, 56, 144);
+
+    width: 100%;
+    font-size: 15px;
+    color: white;
+  }
+}
+
+.label {
+  background-color: rgb(43, 56, 144);
   color: white;
   padding: 5px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 20px;
   font-size: 15px;
-
 }
-.itemSelector{
-
+.itemSelector {
   font-size: 18px;
   padding: 50px;
+}
 
+.actionArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 20px;
+
+  button {
+    margin-right: 20px;
+    margin-top: 40px;
+    background: #2b3890;
+    color: #fff;
+    height: 40px;
+    min-width: 100px;
+  }
 }

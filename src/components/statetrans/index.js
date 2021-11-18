@@ -39,7 +39,7 @@ const initRulesSet = () => {
     const rules = [];
 
     range(0, _RULE_LENGTH - 1).map((index) => {
-      rules.push({ checked: false });
+      rules.push({ checked: false,fromStatus: "EMPTY",toStatus:"EMPTY"});
     });
 
     rulesSet[selector.code] = rules;
@@ -169,7 +169,13 @@ function StateEditor(props) {
     handleRuleChange,
   } = props;
 
-  const rules = values[selectedCode];
+
+  const [rules,setRules]=useState(values[selectedCode])
+
+  useEffect(()=>{
+
+    setRules(values[selectedCode])
+  },[selectedCode,values])
 
   return (
     <div>
@@ -212,7 +218,7 @@ function StateEditor(props) {
                   情形{indexCase + 1}
                 </Col>
                 <Col span={10}>
-                  <select className={styles.select}
+                  <select value={rules[indexCase] && rules[indexCase].fromStatus} className={styles.select}
 
                     onChange={(event) =>
                       handleRuleChange({
@@ -232,7 +238,7 @@ function StateEditor(props) {
                   </select>
                 </Col>
                 <Col span={10}>
-                  <select className={styles.select}
+                  <select value={rules[indexCase] && rules[indexCase].toStatus} className={styles.select}
 
                   onChange={(event) =>
                     handleRuleChange({

@@ -18,7 +18,7 @@ import EleSex from './component/ele-sex';
 
 const columns = [
   { headerName: '姓名', field: 'name', 'pinned': 'left', type: 'ele-user-name' },
-  { headerName: '性别', field: 'sex', type: 'ele-sex' },
+  { headerName: '性别', field: 'sex', type: 'ele-sex',   autoHeight:true },
   { headerName: '年龄', field: 'age' },
   { headerName: '籍贯', field: 'jg' },
   { headerName: '省份', field: 'sf' },

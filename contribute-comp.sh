@@ -8,8 +8,10 @@ function syncone(){
 
 }
 
-syncone process
+#syncone process
+#syncone access
 syncone statetrans
+#syncone ad-list
 
 
 

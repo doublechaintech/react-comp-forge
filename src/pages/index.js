@@ -1,15 +1,13 @@
-
 //import Access from '../components/access';
-import Process from '../components/process'
-//import StateTrans from '../components/statetrans';
+import Process from "../components/process";
 
+import StateTrans from "../components/statetrans";
+//import HomePage from '../components/ad-list'
 
-export default function() {
+export default function () {
   return (
-    <div >
-      <Process />
+    <div>
+      <StateTrans />
     </div>
   );
 }
-
-

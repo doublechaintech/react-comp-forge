@@ -8,8 +8,13 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
+    "@ag-grid-community/client-side-row-model": "^26.2.0",
+    "@ag-grid-community/react": "^26.2.0",
     "@ant-design/pro-layout": "^6.5.0",
+<<<<<<< HEAD
     "axios": "^0.24.0",
+=======
+>>>>>>> 25bf5e767d8dbc5ca81047701fc10e2c0f595077
     "deepdash": "^5.3.9",
     "lodash": "^4.17.21",
     "react": "17.x",

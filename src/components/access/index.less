@@ -1,36 +1,72 @@
 
 
-
-@primary-color: #1890ff; // primary color for all components
-@link-color: #1890ff; // link color
-@success-color: #52c41a; // success state color
-@warning-color: #faad14; // warning state color
-@error-color: #f5222d; // error state color
-@font-size-base: 14px; // major text font size
-@heading-color: rgba(0, 0, 0, 0.85); // heading text color
-@text-color: rgba(0, 0, 0, 0.65); // major text color
-@text-color-secondary: rgba(0, 0, 0, 0.45); // secondary text color
-@disabled-color: rgba(0, 0, 0, 0.25); // disable state color
-@border-radius-base: 2px; // major border radius
-@border-color-base: #d9d9d9; // major border color
-@box-shadow-base: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08),
-  0 9px 28px 8px rgba(0, 0, 0, 0.05); // major shadow for layers
+.container {
+  position: relative;
+  text-align: left;
+  color: black;
+  width: 800px;
+  margin: 40px;
+  padding: 40px;
+  line-height: 9px;
+  font-size: 8px;
 
 
-.ant-checkbox-wrapper {
+  label {
+    background-color: #fff;
 
-  font-size: 10px;
+    border-radius: 0%;
+    cursor: pointer;
+    height: 14px;
+    left: 0;
+
+    top: 0;
+
+  }
+  label:after {
+    border: 2px solid #fff;
+    border-top: none;
+    border-right: none;
+    content: "";
+    height: 5px;
+    left: 1px;
+    opacity: 0;
+    top: 2px;
+    transform: rotate(-45deg);
+    width: 10px;
+  }
+
+  input[type="checkbox" ] {
+    visibility: hidden;
+  }
+  input[type="checkbox" ]:checked + label {
+    //background-color: rgb(43, 56, 144);
+    border-color: rgb(43, 56, 144);
+  }
+  input[type="checkbox" ]:checked + label:after {
+    opacity: 1;
+  }
+
+
+
 
 }
 
-.ant-checkbox-inner {
-  width: 10px;
-  height: 10px;
+.actionArea {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 20px;
+
+  button {
+    margin-right: 20px;
+    margin-top: 40px;
+    background: #2b3890;
+    color: #fff;
+    height: 40px;
+    min-width: 100px;
+  }
+
+
 }
-
-
-.ant-checkbox-inner::after {
-  width: 5px;
-  height: 8px;
-}
-
